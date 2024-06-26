@@ -25,7 +25,6 @@ main {
     align-items: flex-end;
     gap: 30px;
     margin-top: 30px;
-
     flex-wrap: wrap;
 }
 
@@ -38,11 +37,10 @@ main {
     flex-wrap: 2;
     flex-direction: column;
     
-    
 }
 
 textarea {
-    width: 350px;
+    width: 20vw;
     height: 300px;
     font-size: 1rem;
     background-color: transparent;
@@ -51,21 +49,21 @@ textarea {
     box-sizing: border-box;
 }
 
-extarea:focus {
-    border: none; /* Elimina el borde cuando el textarea recibe el foco */
-    outline: none; /* Elimina el borde del outline predeterminado del navegador */
+textarea:focus {
+    border: none; 
+    outline: none; 
 }
 
 .btn-group {
     display: flex;
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
     margin-top: 30px;
-    
+    flex-direction: column;
 }
 
 .btn {
-    
     background-color: #5AB2FF;
     color: #FFF9D0;
     border: none;
@@ -79,17 +77,26 @@ extarea:focus {
 
 .btn:hover {
     background-color: transparent;
-
-    border: solid #5AB2FF;
+    outline: solid #5AB2FF;
     color: #5AB2FF;
 }
 
-
-.col-r{
-    width: 300px;
-    height: 350px;
+.col-r {
+    width: 20vw;
+    height: 70vh;
     background-color: #5AB2FF;
     border-radius: 16px;
     padding: 16px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
+
+#TextResultado {
+    flex: 1;
+}
+
+
+
+

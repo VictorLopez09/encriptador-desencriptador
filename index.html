@@ -15,19 +15,21 @@
         <div class="col-p">
             <div>
                 <textarea id="Entrada" placeholder="Ingresa el texto aquí"></textarea>
+                <div class="btn-group">
+                    <input type="button" value="Encriptar" onclick="llamada()" class="btn">
+                    <input type="button" value="Descriptar" class="btn">
+                </div>
             </div>
-            <div class="btn-group">
-                <input type="button" value="Encriptar" onclick="llamada()" class="btn">
-                <input type="button" value="Descriptar" class="btn">
-            </div>
+            
         </div>
         <div class="col-p">
             <div class="col-r">
                 <p id="TextResultado">Texto resultado</p>
+                <div class="btn-group">
+                    <input type="button" value="Copiar" onclick="copyClip()" class="btn">
+                </div>
             </div>
-            <div class="btn-group">
-                <input type="button" value="Copiar" onclick="copyClip()" class="btn">
-            </div>
+            
         </div>
     </main>
     <script src="/js/app.js"></script>
