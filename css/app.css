@@ -1,14 +1,95 @@
-header{
-    background-color: aqua;
-    height: 100px;
+* {
+    font-family: Helvetica, sans-serif;
 }
 
-.container {
-    display:flex;
+body {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: #5AB2FF;
+    color: #FFF9D0;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.icon {
+    width: 64px;
+}
+
+.col-p {
+    display: flex;
+    flex-wrap: 2;
     flex-direction: column;
-    background-color: lightblue;
-    justify-content: flex-start;    
+    
+    
+}
 
+textarea {
+    width: 350px;
+    height: 300px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: transparent;
+    resize: none;
+    box-sizing: border-box;
+}
+
+extarea:focus {
+    border: none; /* Elimina el borde cuando el textarea recibe el foco */
+    outline: none; /* Elimina el borde del outline predeterminado del navegador */
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+    
+}
+
+.btn {
+    
+    background-color: #5AB2FF;
+    color: #FFF9D0;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 13px;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: transparent;
+
+    border: solid #5AB2FF;
+    color: #5AB2FF;
 }
 
 
+.col-r{
+    width: 300px;
+    height: 350px;
+    background-color: #5AB2FF;
+    border-radius: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+}
