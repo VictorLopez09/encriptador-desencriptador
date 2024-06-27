@@ -45,14 +45,42 @@ function descypText(TextDencrip) {
     return TextDescrip;
 }
 
-
-function llamada(valor){
-    const text = document.getElementById('Entrada').value;
-    alert(text);
-    document.getElementById('TextResultado').innerText = text;
+function removeElement() {
+    const textExemple = document.querySelector('.text-exemple');
+    textExemple.remove();
 }
 
 
+function llamada(valor) {
+    const text = document.getElementById('Entrada').value;
 
+    const result = encrypText(text);
+
+    document.getElementById('TextResultado').innerText = result;
+
+    removeElement();
+
+}
+
+
+function descrip(valor) {
+    const text = document.getElementById('Entrada').value;
+
+    const result = descypText(text);
+
+    document.getElementById('TextResultado').innerText = result;
+
+    removeElement();
+
+}
+
+
+function clipBoard() {
+    let texto = document.getElementById('TextResultado').innerHTML;
+    alert(texto);
+    navigator.clipboard.writeText(texto);
+
+    
+}
 
 

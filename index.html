@@ -9,7 +9,7 @@
 <body>
     <header>
         <img src="img/encriptar.svg" alt="El icono de la pagina" class="icon">
-        <h1>Desencriptados</h1>
+        <h1>Des</h1>
     </header>
     <main>
         <div class="col-p">
@@ -17,16 +17,24 @@
                 <textarea id="Entrada" placeholder="Ingresa el texto aquí"></textarea>
                 <div class="btn-group">
                     <input type="button" value="Encriptar" onclick="llamada()" class="btn">
-                    <input type="button" value="Descriptar" class="btn">
+                    <input type="button" value="Descriptar" class="btn" onclick="descrip()">
                 </div>
             </div>
             
         </div>
         <div class="col-p">
             <div class="col-r">
-                <p id="TextResultado">Texto resultado</p>
-                <div class="btn-group">
-                    <input type="button" value="Copiar" onclick="copyClip()" class="btn">
+                <div class="text-exemple">
+                    <h2>
+                        Ningún mensaje fue encontrado
+                    </h2>
+                    <p>
+                        Ingresa el texto que desees de encriptar o desencriptar.
+                    </p>
+                </div>
+                <p id="TextResultado"></p>
+                <div class="btn-group-center">
+                    <input type="button" value="Copiar" onclick="clipBoard()" class="btn invested"> <!-- Quiero centar este booton -->
                 </div>
             </div>
             

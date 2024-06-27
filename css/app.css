@@ -1,48 +1,48 @@
 * {
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    background-color: #ede5e5;
 }
 
 header {
-    background-color: #5AB2FF;
-    color: #FFF9D0;
+    background-color: #402E7A;
+    color: #ede5e5;
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    gap: 20px;
-    align-items: center;
     padding: 10px 20px;
+    gap: 20px;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 30px;
     margin-top: 30px;
-    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .icon {
     width: 64px;
+    fill: #ede5e5;
 }
 
 .col-p {
     display: flex;
-    flex-wrap: 2;
     flex-direction: column;
-    
+
 }
 
 textarea {
-    width: 20vw;
+    width: 30vw;
     height: 300px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: transparent;
     border: transparent;
     resize: none;
@@ -50,41 +50,45 @@ textarea {
 }
 
 textarea:focus {
-    border: none; 
-    outline: none; 
+    border: none;
+    outline: none;
 }
 
 .btn-group {
     display: flex;
-    gap: 10px;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 30px;
-    flex-direction: column;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.btn-group-center {
+    display: flex;
+    justify-content: center; /* Centrar el botón */
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    margin-bottom: 30px;
 }
 
 .btn {
-    background-color: #5AB2FF;
-    color: #FFF9D0;
+    background-color: #402E7A;
+    color: #ede5e5;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border-radius: 13px;
     width: 120px;
     height: 50px;
-    text-align: center;
 }
 
 .btn:hover {
     background-color: transparent;
-    outline: solid #5AB2FF;
-    color: #5AB2FF;
+    outline: solid #402E7A;
+    color: #402E7A;
 }
 
 .col-r {
     width: 20vw;
     height: 70vh;
-    background-color: #5AB2FF;
+    background-color: #402E7A;
     border-radius: 16px;
     padding: 16px;
     box-sizing: border-box;
@@ -95,8 +99,78 @@ textarea:focus {
 
 #TextResultado {
     flex: 1;
+    font-size: 1.4rem;
+    color: #ede5e5;
+}
+
+.invested {
+    outline: solid #ede5e5;
+    color: #ede5e5;
+    background-color: transparent;
+}
+
+.invested:hover {
+    outline: solid #574592;
+    color: #402E7A;
+    background-color: #ede5e5;
 }
 
 
+.text-exemple{
+    text-align: center;
+    color: #ede5e5;
+    width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
+    box-sizing: border-box;
+    
+}
+
+@media (max-width: 600px) {
+    /* Estilos para teléfonos móviles */
+    main {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    
+    textarea {
+        width: 90vw;
+    }
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .col-r {
+        
+        box-sizing: border-box;
+    }
+}
 
 
+@media (max-width: 1024px) {
+    /* Estilos para tabletas */
+    main {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 90vw;
+        
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .col-r {
+        width: 90vw;
+        height: 40vh;
+    }
+}
