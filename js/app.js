@@ -45,42 +45,42 @@ function descypText(TextDencrip) {
     return TextDescrip;
 }
 
-function removeElement() {
+function removeElement(text) {
     const textExemple = document.querySelector('.text-exemple');
-    textExemple.remove();
+    if (textExemple) {
+        textExemple.remove();
+    }
+
+    const btnCopy = document.querySelector('#copiar');
+    btnCopy.hidden = false;
+
 }
 
 
-function llamada(valor) {
+function llamada() {
     const text = document.getElementById('Entrada').value;
-
     const result = encrypText(text);
-
-    document.getElementById('TextResultado').innerText = result;
-
-    removeElement();
-
+    actualizarResultado(result);
+    removeElement(result);
 }
 
-
-function descrip(valor) {
+function descrip() {
     const text = document.getElementById('Entrada').value;
-
     const result = descypText(text);
-
-    document.getElementById('TextResultado').innerText = result;
-
+    actualizarResultado(result);
     removeElement();
-
 }
 
+function actualizarResultado(resultado) {
+    document.getElementById('TextResultado').innerText = resultado;
+}
 
 function clipBoard() {
-    let texto = document.getElementById('TextResultado').innerHTML;
-    alert(texto);
+    const texto = document.getElementById('TextResultado').innerText;
+
     navigator.clipboard.writeText(texto);
 
-    
+
 }
 
 
