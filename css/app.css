@@ -8,6 +8,10 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: #ede5e5;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
 }
 
 header {
@@ -24,19 +28,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 30px;
     gap: 50px;
-}
-
-.icon {
-    width: 64px;
-    fill: #ede5e5;
-}
-
-.col-p {
-    display: flex;
-    flex-direction: column;
-
+    flex-grow: 1;
 }
 
 textarea {
@@ -52,6 +45,32 @@ textarea {
 textarea:focus {
     border: none;
     outline: none;
+}
+
+footer{
+    background-color: #402E7A;
+    margin-top: 20px;
+    padding: 10px 20px;
+    
+}
+
+
+a{
+    color: #ede5e5;
+}
+
+h1{
+    font-size: 1.5rem;
+}
+
+.icon {
+    width: 64px;
+    fill: #ede5e5;
+}
+
+.col-p {
+    display: flex;
+    flex-direction: column;
 }
 
 .btn-group {
@@ -161,8 +180,6 @@ textarea:focus {
     textarea {
         width: 90vw;
         width: 60vW      
-        
-        
     }
 
     .btn-group {
