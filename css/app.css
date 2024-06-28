@@ -75,7 +75,7 @@ textarea:focus {
     cursor: pointer;
     font-size: 1.2rem;
     border-radius: 13px;
-    width: 120px;
+    width: 140px;
     height: 50px;
 }
 
@@ -97,7 +97,7 @@ textarea:focus {
     align-items: flex-start;
 }
 
-#TextResultado {
+#TextoResultado {
     flex: 1;
     font-size: 1.4rem;
     color: #ede5e5;
@@ -116,7 +116,7 @@ textarea:focus {
 }
 
 
-.text-exemple{
+.ejemplo-texto{
     text-align: center;
     color: #ede5e5;
     width: 100%; /* Asegurar que ocupe todo el ancho del contenedor */
@@ -160,6 +160,8 @@ textarea:focus {
 
     textarea {
         width: 90vw;
+        width: 60vW      
+        
         
     }
 
@@ -171,6 +173,6 @@ textarea:focus {
 
     .col-r {
         width: 90vw;
-        height: 40vh;
+        height: 30vh;
     }
 }

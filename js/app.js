@@ -1,8 +1,9 @@
-function encrypText(TextEncrip) {
-    let TextChar = TextEncrip.split('');
-    let encryptedText = '';
+// Función para encriptar el texto
+function encriptarTexto(textoParaEncriptar) {
+    let caracteres = textoParaEncriptar.split('');
+    let textoEncriptado = '';
 
-    const letters = {
+    const letras = {
         'e': 'enter',
         'i': 'imes',
         'a': 'ai',
@@ -10,77 +11,75 @@ function encrypText(TextEncrip) {
         'u': 'ufat'
     };
 
-    for (let i = 0; i < TextChar.length; i++) {
-        const char = TextChar[i];
-        if (letters[char]) {
-            encryptedText += letters[char];
+    for (let i = 0; i < caracteres.length; i++) {
+        const caracter = caracteres[i];
+        if (letras[caracter]) {
+            textoEncriptado += letras[caracter];
         } else {
-            encryptedText += char;
+            textoEncriptado += caracter;
         }
     }
 
-    return encryptedText;
+    return textoEncriptado;
 }
 
-function descypText(TextDencrip) {
+// Función para desencriptar el texto
+function desencriptarTexto(textoParaDesencriptar) {
+    let textoDesencriptado = textoParaDesencriptar;
 
-    let TextDescrip = TextDencrip;
+    const letras = [
+        ['e', 'enter'],
+        ['i', 'imes'],
+        ['a', 'ai'],
+        ['o', 'ober'],
+        ['u', 'ufat']
+    ];
 
-    const letters =
-        [
-            ['e', 'enter'],
-            ['i', 'imes'],
-            ['a', 'ai'],
-            ['o', 'ober'],
-            ['u', 'ufat']
-        ];
-
-    for (let i = 0; i < letters.length; i++) {
-
-        const element = letters[i];
-        const regex = new RegExp(element[1], 'g');
-        TextDescrip = TextDescrip.replace(regex, element[0]);
-
+    for (let i = 0; i < letras.length; i++) {
+        const elemento = letras[i];
+        const regex = new RegExp(elemento[1], 'g');
+        textoDesencriptado = textoDesencriptado.replace(regex, elemento[0]);
     }
-    return TextDescrip;
+    return textoDesencriptado;
 }
 
-function removeElement(text) {
-    const textExemple = document.querySelector('.text-exemple');
-    if (textExemple) {
-        textExemple.remove();
+// Función para eliminar un elemento y mostrar el botón de copiar
+function eliminarElemento() {
+    const ejemploTexto = document.querySelector('.ejemplo-texto');
+    if (ejemploTexto) {
+        ejemploTexto.remove();
     }
 
-    const btnCopy = document.querySelector('#copiar');
-    btnCopy.hidden = false;
-
+    const botonCopiar = document.querySelector('#copiar');
+    botonCopiar.hidden = false;
 }
 
-
-function llamada() {
-    const text = document.getElementById('Entrada').value;
-    const result = encrypText(text);
-    actualizarResultado(result);
-    removeElement(result);
+// Función para encriptar el texto ingresado y actualizar el resultado
+function encriptar() {
+    const texto = document.getElementById('Entrada').value;
+    const resultado = encriptarTexto(texto);
+    actualizarResultado(resultado);
+    eliminarElemento();
 }
 
-function descrip() {
-    const text = document.getElementById('Entrada').value;
-    const result = descypText(text);
-    actualizarResultado(result);
-    removeElement();
+// Función para desencriptar el texto ingresado y actualizar el resultado
+function desencriptar() {
+    const texto = document.getElementById('Entrada').value;
+    const resultado = desencriptarTexto(texto);
+    actualizarResultado(resultado);
+    eliminarElemento();
 }
 
+// Función para actualizar el elemento de resultado con el texto proporcionado
 function actualizarResultado(resultado) {
-    document.getElementById('TextResultado').innerText = resultado;
+    document.getElementById('TextoResultado').innerText = resultado;
 }
 
-function clipBoard() {
-    const texto = document.getElementById('TextResultado').innerText;
-
+// Función para copiar el texto del resultado al portapapeles
+function copiarAlPortapapeles() {
+    const texto = document.getElementById('TextoResultado').innerText;
     navigator.clipboard.writeText(texto);
-
-
+    alert('Se copio al portapapeles')
 }
 
 

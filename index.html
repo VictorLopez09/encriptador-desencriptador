@@ -5,28 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
-    <title>Descriptador</title>
+    <title>Encriptar & Desencriptar</title>
 </head>
 
 <body>
     <header>
         <img src="img/llave.svg" alt="El icono de la pagina" class="icon">
-        <h1>Des</h1>
+        <h1>Encriptar & Desencriptar</h1>
     </header>
     <main>
         <div class="col-p">
             <div>
                 <textarea id="Entrada" placeholder="Ingresa el texto aquí" required></textarea>
                 <div class="btn-group">
-                    <input type="button" value="Encriptar" onclick="llamada()" class="btn">
-                    <input type="button" value="Descriptar" class="btn" onclick="descrip()">
+                    <input type="button" value="Encriptar" onclick="encriptar()" class="btn">
+                    <input type="button" value="Desencriptar" onclick="desencriptar()" class="btn">
                 </div>
             </div>
 
         </div>
         <div class="col-p">
             <div class="col-r">
-                <div class="text-exemple">
+                <div class="ejemplo-texto">
                     <h2>
                         Ningún mensaje fue encontrado
                     </h2>
@@ -34,9 +34,9 @@
                         Ingresa el texto que desees de encriptar o desencriptar.
                     </p>
                 </div>
-                <p id="TextResultado"></p>
+                <p id="TextoResultado"></p>
                 <div class="btn-group-center">
-                    <input type="button" value="Copiar" onclick="clipBoard()" class="btn invested" id="copiar" hidden>
+                    <input type="button" value="Copiar" onclick="copiarAlPortapapeles()" class="btn invested" id="copiar" hidden>
                     
                 </div>
             </div>
